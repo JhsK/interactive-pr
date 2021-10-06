@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.container .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    background-blend-mode: multiply;
+}
+
+.container .section:nth-child(1) {
+    background: #f00 url('./assets/bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .section:nth-child(2) {
+    background: #0f0 url('./assets/bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    -webkit-animation: fadein 3s;
+    -o-animation: fadein 3s;
+}
+
+.container .section:nth-child(3) {
+    background: #ff0 url('./assets/bg3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .section:nth-child(4) {
+    background: #0ff url('./assets/bg4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .section:nth-child(5) {
+    background: #00f url('./assets/bg5.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .section .content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    max-width: 700px;
+}
+
+.container .section .content:nth-child(1) {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    -webkit-animation: fadein 3s;
+    -o-animation: fadein 3s;
+}
+
+.container .section .content:nth-child(2) {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    -webkit-animation: fadein 3s;
+    -o-animation: fadein 3s;
+}
+
+.container .section .content h2 {
+    color: #111;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 0px;
+    font-size: 2em;
+}
+
+.container .section .content h2:nth-child(1) {
+    position: absolute;
+    left: 10px;
+    bottom: 100px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+.container .section .content h2:nth-child(1)::before {
+    content: 'Section One Title';
+    position: absolute;
+    left: 10px;
+    bottom: 100px;
+    overflow: hidden;
+    border-right: 3px solid white;
+    animation: typing 6s steps(17) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+.container .section .content p {
+    background: #fff;
+    color: #111;
+    font-weight: 300;
+    padding: 10px 20px;
+    font-size: 10px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
